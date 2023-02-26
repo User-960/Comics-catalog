@@ -1,14 +1,28 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+/* Plugins */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
 
-const mode = process.env.NODE_ENV || 'development';
+/* Variables env */
+const env = dotenv.config().parsed;
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next])
+  return prev
+}, {});
+
+/* Variables for dev and prod */
+// const mode = process.env.NODE_ENV || 'development';
+const mode = process.env.NODE_ENV === "production" ? "production" : "development";
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
+/* Config */
 module.exports = {
   mode,
   target,
@@ -26,6 +40,7 @@ module.exports = {
     assetModuleFilename: 'assets/[name][ext]',
   },
   plugins: [
+    new webpack.DefinePlugin(envKeys),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
