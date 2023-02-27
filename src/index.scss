@@ -2,5 +2,6 @@
 @import 'style/reset';
 @import 'style/fonts';
 @import 'style/var';
-@import 'style/global';
 @import 'style/style';
+
+@import './components/App/App.scss';

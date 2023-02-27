@@ -1,6 +1,10 @@
 html,
 body {
   height: 100%;
+  background-color: $color-dark;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Montserrat";
 }
 
 .wrapper {
@@ -23,15 +27,23 @@ body {
   padding: 0 15px;
 }
 
+/* scrollbar for FireFox */
+* {
+  scrollbar-color: $color-dark $color-white;
+  scrollbar-width: thin;
+}
+
+/* scrollbar for Chrome */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-dark;
-  border-radius: 5px;
+  background-color: $color-white;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $color-white;
+  background-color: $color-dark;
 }
