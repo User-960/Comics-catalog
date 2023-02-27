@@ -1,14 +1,13 @@
 import 'regenerator-runtime/runtime';
 import axios from "axios";
+import { API_URL, URL_COMICS } from "./constants/api";
 
 import "./index.html";
 import "./index.scss";
-
-const url = "https://gateway.marvel.com/v1/public/comics";
 class GetDataApi {
-  async getData(urlApi) {
+  async getData(url) {
     try {
-      const response = await axios.get(urlApi, {
+      const response = await axios.get(url, {
         params: {
           apikey: process.env.API_KEY,
           limit: 50
@@ -25,7 +24,7 @@ class GetDataApi {
 const getDataApi = new GetDataApi();
 
 (async () => {
-  const data = await getDataApi.getData(url);
+  const data = await getDataApi.getData(API_URL + URL_COMICS);
 
   if (data) {
     console.log(data);
