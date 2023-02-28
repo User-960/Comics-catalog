@@ -22,8 +22,8 @@ class Comics {
           const imgSrc = path + "/" + IMG_STANDART_XLARGE + "." + extension;
             htmlContent += `
               <li class="comics__item" data-url="${url}">
-                <span class="comics__item-title">${title}</span>
-                <img class="comics__item-img" src="${imgSrc}" alt="comic book cover"/>
+                <span class="comics__item_title">${title}</span>
+                <img class="comics__item_img" src="${imgSrc}" alt="comic book cover"/>
               </li>
             `;
           }

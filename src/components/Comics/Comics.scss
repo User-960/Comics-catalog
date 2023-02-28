@@ -2,6 +2,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__item {
     width: 250px;
@@ -18,12 +19,12 @@
     transform: rotate(-3deg) scale(0.95);
     filter: saturate(150%);
   }
-  &__item-title {
+  &__item_title {
     display: flex;
     margin: auto;
     padding: $spacing-small $spacing-medium;
   }
-  &__item-img {
+  &__item_img {
     width: 100%;
   }
 }
