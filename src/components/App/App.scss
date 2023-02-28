@@ -1,3 +1,8 @@
+@import "../../style/libs";
+@import "../../style/reset";
+@import "../../style/fonts";
+@import "../../style/var";
+
 html,
 body {
   height: 100%;
@@ -7,24 +12,30 @@ body {
   font-family: "Montserrat";
 }
 
-.wrapper {
+:global(.wrapper) {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
-.main {
+:global(.main) {
   flex: 1 0 auto;
 }
 
-.footer {
+:global(.footer) {
   flex: 0 0 auto;
 }
 
-.container {
+:global(.container) {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+:global(.img-contain) {
+  display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* scrollbar for FireFox */

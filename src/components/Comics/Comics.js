@@ -1,3 +1,4 @@
+import classes from "./Comics.scss";
 import {
  API_URL, URL_COMICS, URL_CHARACTERS, IMG_STANDART_XLARGE, IMG_NOT_AVAILABLE
 } from "../../constants/api";
@@ -21,15 +22,15 @@ class Comics {
           const url = API_URL + URL_COMICS + "/" + id + "/" + URL_CHARACTERS;
           const imgSrc = path + "/" + IMG_STANDART_XLARGE + "." + extension;
             htmlContent += `
-              <li class="comics__item" data-url="${url}">
-                <span class="comics__item_title">${title}</span>
-                <img class="comics__item_img" src="${imgSrc}" alt="comic book cover"/>
+              <li class="comics__item ${classes.comics__item}" data-url="${url}">
+                <span class="${classes.comics__item_title}">${title}</span>
+                <img class="img-contain ${classes.comics__item_img}" src="${imgSrc}" alt="comic book cover"/>
               </li>
             `;
           }
       });
       const htmlWrapper = `
-        <ul class="comics__list">
+        <ul class="${classes.comics__list}">
           ${htmlContent}
         </ul>
         `;

@@ -1,3 +1,4 @@
+import "./App.scss";
 import Comics from "../Comics/Comics";
 
 class App {
