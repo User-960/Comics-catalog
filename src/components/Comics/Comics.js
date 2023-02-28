@@ -39,6 +39,14 @@ class Comics {
       console.log("Error: " + data);
     }
   }
+
+  eventListener() {
+    document.querySelectorAll(".comics__item").forEach(element => {
+      element.addEventListener("click", () => {
+        console.log("Open modal window");
+      });
+    });
+  }
 }
 
 export default new Comics();
