@@ -1,5 +1,5 @@
 import {
- API_URL, URL_COMICS, IMG_STANDART_XLARGE, IMG_NOT_AVAILABLE
+ API_URL, URL_COMICS, URL_CHARACTERS, IMG_STANDART_XLARGE, IMG_NOT_AVAILABLE
 } from "../../constants/api";
 import { getDataApi } from "../../utils/getDataApi";
 import { ROOT_INDEX } from "../../constants/root";
@@ -17,12 +17,11 @@ class Comics {
      * @param [Object] thumbnail => [String] path - http://...
      */
       data.forEach(({ id, title, thumbnail: { path, extension } }) => {
-        console.log(id, title);
-
         if (path.lastIndexOf(IMG_NOT_AVAILABLE) === -1) {
+          const url = API_URL + URL_COMICS + "/" + id + "/" + URL_CHARACTERS;
           const imgSrc = path + "/" + IMG_STANDART_XLARGE + "." + extension;
             htmlContent += `
-              <li class="comics__item">
+              <li class="comics__item" data-url="${url}">
                 <span class="comics__item-title">${title}</span>
                 <img class="comics__item-img" src="${imgSrc}" alt="comic book cover"/>
               </li>
@@ -42,8 +41,9 @@ class Comics {
 
   eventListener() {
     document.querySelectorAll(".comics__item").forEach(element => {
+      const url = element.getAttribute("data-url");
       element.addEventListener("click", () => {
-        console.log("Open modal window");
+        console.log(url);
       });
     });
   }
