@@ -19,6 +19,7 @@
       "indent": ["off", "2"], // enforces a consistent indentation style
       "no-useless-concat": "off", // rule aims to flag the concatenation of 2 literals when they could be combined into a single literal
       "space-infix-ops": ["off", { "int32Hint": false }],
+      "no-unused-expressions": "off", // rule aims to eliminate unused expressions which have no effect on the state of the program.
       "class-methods-use-this": ["off", { "exceptMethods": ["getData"] }], // rule is aimed to flag class methods that do not use this
       "linebreak-style": 0,
       "global-require": 0,

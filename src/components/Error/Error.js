@@ -6,7 +6,7 @@ class Error {
   render() {
     const html = `
       <div class="${classes.error__inner}">
-        <img class="${classes.error__img}" src="${ErrorIcon}" alt="Error! No access."/>
+        <img class="img-contain ${classes.error__img}" src="${ErrorIcon}" alt="Error! No access."/>
         <div class="${classes.error__message}">
           <h3>No access!</h3>
           <p>Try again later.</p>
