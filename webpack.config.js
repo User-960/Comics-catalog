@@ -98,7 +98,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|webp|gif|svg)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         use: devMode
           ? []
           : [

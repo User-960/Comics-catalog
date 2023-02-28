@@ -1,4 +1,5 @@
 import classes from "./Comics.scss";
+import Error from "../Error/Error";
 import {
  API_URL, URL_COMICS, URL_CHARACTERS, IMG_STANDART_XLARGE, IMG_NOT_AVAILABLE
 } from "../../constants/api";
@@ -36,7 +37,7 @@ class Comics {
         `;
       ROOT_INDEX.innerHTML = htmlWrapper;
     } else {
-      console.log("Error: " + data);
+      Error.render();
     }
   }
 
