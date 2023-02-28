@@ -22,15 +22,15 @@ class Comics {
         if (path.lastIndexOf(IMG_NOT_AVAILABLE) === -1) {
           const imgSrc = path + "/" + IMG_STANDART_XLARGE + "." + extension;
             htmlContent += `
-              <li>
-                <span>${title}</span>
-                <img src="${imgSrc}" alt="comic book cover"/>
+              <li class="comics__item">
+                <span class="comics__item-title">${title}</span>
+                <img class="comics__item-img" src="${imgSrc}" alt="comic book cover"/>
               </li>
             `;
           }
       });
       const htmlWrapper = `
-        <ul>
+        <ul class="comics__list">
           ${htmlContent}
         </ul>
         `;
