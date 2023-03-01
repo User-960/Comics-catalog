@@ -4,7 +4,7 @@ The Comics-catalog is built on the Webpack.
 
 What is used:
 
-- Programming languages: HTML, CSS, JavaScript;
+- Programming languages: HTML, CSS, JavaScript ES6;
 - Bundler: Webpack;
 - Preprocessor: SCSS;
 - Libraries: axios, CSS-modules, Babel, ESLint;
