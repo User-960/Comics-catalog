@@ -1,5 +1,6 @@
 import { ROOT_INDEX } from "../../constants/root";
 import SpinnerIcon from "../../images/spinner.svg";
+
 import classes from "./Spinner.scss";
 
 class Spinner {

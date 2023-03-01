@@ -1,6 +1,7 @@
-import classes from "./Error.scss";
 import { ROOT_INDEX } from "../../constants/root";
 import ErrorIcon from "../../images/error.svg";
+
+import classes from "./Error.scss";
 
 class Error {
   render() {

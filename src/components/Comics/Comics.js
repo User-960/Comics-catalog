@@ -1,4 +1,4 @@
-import classes from "./Comics.scss";
+import charactersPage from "../Characters/Characters";
 import errorPage from "../Error/Error";
 import spinnerPage from "../Spinner/Spinner";
 
@@ -7,6 +7,8 @@ import {
 } from "../../constants/api";
 import { ROOT_INDEX } from "../../constants/root";
 import { getDataApi } from "../../utils/getDataApi";
+
+import classes from "./Comics.scss";
 
 class Comics {
   renderComics(data) {
@@ -53,7 +55,7 @@ class Comics {
     document.querySelectorAll(".comics__item").forEach(element => {
       const url = element.getAttribute("data-url");
       element.addEventListener("click", () => {
-        console.log(url);
+        charactersPage.render(url);
       });
     });
   }

@@ -1,5 +1,6 @@
-import "./App.scss";
 import Comics from "../Comics/Comics";
+
+import "./App.scss";
 
 class App {
   async render() {
