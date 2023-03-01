@@ -43,13 +43,9 @@ class Characters {
    ROOT_MODAL.innerHTML = htmlWrapper;
   }
 
-  renderNotification() {
-    notificationPage.render();
-  }
-
   async render(url) {
     const data = await getDataApi.getData(url);
-    data.length ? this.renderContent(data) : this.renderNotification();
+    data.length ? this.renderContent(data) : notificationPage.render();
   }
 }
 export default new Characters();
