@@ -46,4 +46,11 @@
     text-overflow: ellipsis;
     text-align: center;
   }
+  &__close {
+    position: absolute;
+    top: $spacing-large;
+    right: $spacing-large;
+    width: 36px;
+    height: 36px;
+  }
 }

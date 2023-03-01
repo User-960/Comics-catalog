@@ -12,6 +12,7 @@ body {
   font-family: "Montserrat";
 }
 
+/* global class which most important then another classes in components */
 :global(.wrapper) {
   display: flex;
   flex-direction: column;
@@ -42,6 +43,19 @@ body {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+:global(.bg-contain) {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+:global(.btn) {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 
 /* scrollbar for FireFox */
