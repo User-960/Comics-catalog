@@ -1,13 +1,15 @@
 import { ROOT_MODAL } from "../../constants/root.js";
 import imgCloseBlack from "../../images/x-circle-black.svg";
 
+import classes from "./Notification.scss";
+
 class Notification {
   render() {
     let htmlContent = `
-      <div class="notification__container">
+      <div class="${classes.notification__inner}">
         <span>No content</span>
         <button
-          class="btn bg-contain notification__close"
+          class="btn bg-contain ${classes.notification__close}"
           onclick="modal.innerHTML = ''"
           style="background-image: url(${imgCloseBlack})"
       ></button>
