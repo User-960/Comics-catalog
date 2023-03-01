@@ -13,6 +13,7 @@ import classes from "./Comics.scss";
 class Comics {
   renderComics(data) {
     let htmlContent = "";
+
     /**
    * @param [Number] id - identification of item
    * @param [String] title - title of item
@@ -23,19 +24,22 @@ class Comics {
       if (path.lastIndexOf(IMG_NOT_AVAILABLE) === -1) {
         const url = API_URL + URL_COMICS + "/" + id + "/" + URL_CHARACTERS;
         const imgSrc = path + "/" + IMG_STANDART_XLARGE + "." + extension;
-          htmlContent += `
-            <li class="comics__item ${classes.comics__item}" data-url="${url}">
-              <span class="${classes.comics__item_title}">${title}</span>
-              <img class="img-contain ${classes.comics__item_img}" src="${imgSrc}" alt="comic book cover"/>
-            </li>
-          `;
-        }
+
+        htmlContent += `
+          <li class="comics__item ${classes.comics__item}" data-url="${url}">
+            <span class="${classes.comics__item_title}">${title}</span>
+            <img class="img-contain ${classes.comics__item_img}" src="${imgSrc}" alt="comic book cover"/>
+          </li>
+        `;
+      }
     });
+
     const htmlWrapper = `
       <ul class="${classes.comics__list}">
         ${htmlContent}
       </ul>
-      `;
+    `;
+
     ROOT_INDEX.innerHTML = htmlWrapper;
   }
 
