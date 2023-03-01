@@ -11,8 +11,3 @@ What is used:
 - Bundler: Webpack;
 - Preprocessor: SCSS;
 - Libraries: axios, CSS-modules, Babel, ESLint;
-
-To install packages, use the command
-```shell
-npm install
-```
