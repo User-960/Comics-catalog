@@ -38,6 +38,12 @@ body {
   object-position: center;
 }
 
+:global(.img-cover) {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* scrollbar for FireFox */
 * {
   scrollbar-color: $color-turquoise $color-dark;

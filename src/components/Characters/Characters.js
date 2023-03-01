@@ -2,6 +2,8 @@ import { getDataApi } from "../../utils/getDataApi";
 import { IMG_STANDART_XLARGE } from "../../constants/api";
 import { ROOT_MODAL } from "../../constants/root";
 
+import classes from "./Characters.scss";
+
 class Characters {
   renderContent(data) {
     let htmlContent = "";
@@ -16,17 +18,19 @@ class Characters {
     const newName = name.replace(" (Ultimate)", "");
 
     htmlContent += `
-      <li class="characters__item">
-        <img class="characters__img" src="${imgSrc}" alt="Image of character"/>
-        <span class="characters__name">${newName}</span>
+      <li class="${classes.characters__item}">
+        <img class="img-cover ${classes.characters__img}" src="${imgSrc}" alt="Image of character"/>
+        <span class="${classes.characters__name}">${newName}</span>
       </li>
     `;
    });
 
    const htmlWrapper = `
-    <ul class="characters__list">
-      ${htmlContent}
-    </ul>
+    <div class="${classes.characters__inner}">
+      <ul class="${classes.characters__list}">
+        ${htmlContent}
+      </ul>
+     </div>
    `;
 
    ROOT_MODAL.innerHTML = htmlWrapper;
