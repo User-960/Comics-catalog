@@ -9,7 +9,12 @@ What is used:
 - Preprocessor: SCSS;
 - Libraries: axios, CSS-modules, Babel, ESLint;
 
-To install packages, use the command
+To clone repository
+```shell
+git clone https://github.com/User-960/Comics-catalog.git
+```
+
+To install packages
 ```shell
 npm install
 ```
