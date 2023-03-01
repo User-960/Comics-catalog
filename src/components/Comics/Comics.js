@@ -1,10 +1,12 @@
 import classes from "./Comics.scss";
-import Error from "../Error/Error";
+import errorPage from "../Error/Error";
+import spinnerPage from "../Spinner/Spinner";
+
 import {
  API_URL, URL_COMICS, URL_CHARACTERS, IMG_STANDART_XLARGE, IMG_NOT_AVAILABLE
 } from "../../constants/api";
-import { getDataApi } from "../../utils/getDataApi";
 import { ROOT_INDEX } from "../../constants/root";
+import { getDataApi } from "../../utils/getDataApi";
 
 class Comics {
   renderComics(data) {
@@ -36,8 +38,15 @@ class Comics {
   }
 
   async render() {
+    spinnerPage.render();
     const data = await getDataApi.getData(API_URL + URL_COMICS);
-    data ? this.renderComics(data) : Error.render();
+    if (data) {
+      spinnerPage.handlerClear();
+      this.renderComics(data);
+    } else {
+      spinnerPage.handlerClear();
+      errorPage.render();
+    }
   }
 
   eventListener() {

@@ -40,7 +40,7 @@ body {
 
 /* scrollbar for FireFox */
 * {
-  scrollbar-color: $color-blue $color-dark;
+  scrollbar-color: $color-turquoise $color-dark;
   scrollbar-width: thin;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-blue;
+  background-color: $color-turquoise;
   border-radius: 2px;
 }
 
