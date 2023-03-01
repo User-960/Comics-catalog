@@ -1,5 +1,6 @@
 import { ROOT_INDEX } from "../../constants/root";
 import SpinnerIcon from "../../images/spinner.svg";
+import classes from "./Spinner.scss";
 
 class Spinner {
   handlerClear() {
@@ -8,8 +9,8 @@ class Spinner {
 
   render() {
     const html = `
-      <div class="spinner__inner">
-        <img class="spinner__img" src="${SpinnerIcon}" alt="spinner..."/>
+      <div class="${classes.spinner__inner}">
+        <img class="${classes.spinner__img}" src="${SpinnerIcon}" alt="spinner..."/>
       </div>
     `;
 
