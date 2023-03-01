@@ -2,6 +2,8 @@ import { getDataApi } from "../../utils/getDataApi";
 import { IMG_STANDART_XLARGE } from "../../constants/api";
 import { ROOT_MODAL } from "../../constants/root";
 import imgCloseWhite from "../../images/x-circle-white.svg";
+import notificationPage from "../Notification/Notification";
+
 import classes from "./Characters.scss";
 
 class Characters {
@@ -42,7 +44,7 @@ class Characters {
   }
 
   renderNotification() {
-    console.log("no");
+    notificationPage.render();
   }
 
   async render(url) {
