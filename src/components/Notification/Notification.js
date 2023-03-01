@@ -1,10 +1,17 @@
 import { ROOT_MODAL } from "../../constants/root.js";
+import imgCloseBlack from "../../images/x-circle-black.svg";
 
 class Notification {
   render() {
-    console.log("no content");
     let htmlContent = `
-
+      <div class="notification__container">
+        <span>No content</span>
+        <button
+          class="btn bg-contain notification__close"
+          onclick="modal.innerHTML = ''"
+          style="background-image: url(${imgCloseBlack})"
+      ></button>
+      </div>
     `;
 
     ROOT_MODAL.innerHTML = htmlContent;
